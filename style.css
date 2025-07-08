@@ -1,0 +1,173 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2f3542;
+  --box-bg: #f8f9fa;
+  --border-color: #dcdde1;
+  --highlight-correct: #2ecc71;
+  --highlight-error: #e74c3c;
+}
+
+body.dark {
+  --bg-color: #1e272e;
+  --text-color: #ecf0f1;
+  --box-bg: #2f3640;
+  --border-color: #57606f;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.container {
+  background: var(--box-bg);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  max-width: 750px;
+  width: 90%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.sentence {
+  font-size: 1.2rem;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+  background: var(--box-bg);
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: left;
+  min-height: 100px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  resize: vertical;
+  outline: none;
+  margin-bottom: 20px;
+  background: var(--box-bg);
+  color: var(--text-color);
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+textarea::placeholder {
+  color: #b2bec3;
+}
+
+.info p {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  background-color: #00b894;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #019875;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.correct {
+  color: var(--highlight-correct);
+}
+
+.incorrect {
+  color: var(--highlight-error);
+}
+
+/* Toggle Switch UI */
+.toggles {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.switch-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  cursor: pointer;
+  user-select: none;
+  padding-left: 45px;
+}
+
+.switch-label input {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 22px;
+  transition: background-color 0.3s ease;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.switch-label input:checked + .switch {
+  background-color: #00b894;
+}
+
+.switch-label input:checked + .switch::before {
+  transform: translateX(18px);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="toggles">
+    <label class="switch-label">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="switch"></span>
+      Dark Mode
+    </label>
+    <label class="switch-label">
+      <input type="checkbox" id="countdownToggle" />
+      <span class="switch"></span>
+      Countdown Mode (60s)
+    </label>
+  </div>
+
+  <div class="container">
+    <h1>Typing Speed Test</h1>
+    <div class="sentence" id="sentenceDisplay"></div>
+    <textarea id="inputArea" placeholder="Start typing here..." rows="4"></textarea>
+
+    <div class="info">
+      <p>Time: <span id="timer">0.00</span> sec</p>
+      <p>WPM: <span id="wpm">0</span></p>
+      <p>Accuracy: <span id="accuracy">0.00</span>%</p>
+    </div>
+
+    <div class="button-group">
+      <button id="stopBtn">Stop Test</button>
+      <button id="restartBtn">Restart Test</button>
+    </div>
+  </div>
+
+  <footer>© 2025 Made by Raja Varma</footer>
+
+  <audio id="stopSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4c1946e8fd.mp3?filename=notification-132123.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
+i
